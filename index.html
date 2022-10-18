@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  <title>React App</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous" defer>
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous" defer>
+    </script>
+
+  <script src="./scripts.js" defer></script>
+
+</head>
+
+<body>
+    <div class="container mt-5" style="width: 80%">
+        <div class="card " >
+          <div class="card-header">
+            formulário com consistência dos campos
+          </div>
+  
+          <form class="card-body" id="form">
+  
+            <div class="form-group mb-3">
+              <label for="field_name">
+                <small>* </small>nome
+              </label>
+              <input type="text" class="form-control" id="field_name" />
+              <small id="field_name_errorMessage" class="form-text h6" style="color:red; display: none"><strong>*** um [nome] válido é requerido ***</strong></small>
+            </div>
+  
+            <div class="form-group mb-3">
+              <label for="field_cellphone">
+                <small>* </small>celular
+              </label>
+              <input type="text" class="form-control" id="field_cellphone" />
+              <small id="field_cellphone_errorMessage" class="form-text h6" style="color:red; display: none"><strong>*** um [celular] válido é requerido ***</strong></small>
+            </div>
+  
+            <div class="form-group mb-3">
+              <label for="field_email">
+                <small>* </small>e-mail
+              </label>
+              <input type="email" class="form-control" id="field_email" />
+              <small id="field_email_errorMessage" class="form-text h6" style="color:red; display: none"><strong>*** um [email] válido é requerido ***</strong></small>
+            </div>
+  
+            <div class="form-group mb-3">
+              <label for="field_password">
+                <small>* </small>senha
+              </label>
+              <input type="password" class="form-control" id="field_password" />
+              <small id="field_password_errorMessage" class="form-text h6" style="color:red; display: none"><strong>*** uma [senha] válida é requerida ***</strong></small>
+            </div>
+  
+            <div class="form-group">
+              <label for="field_password_retype">
+                <small>* </small>confirmação da senha
+              </label>
+              <input type="password" class="form-control " id="field_password_retype" />
+              <small id="field_password_retype_errorMessage" class="form-text h6" style="color:red; display: none"><strong>*** os campos de senha e confirmação precisam ser iguais ***</strong></small>
+            
+            </div>
+             
+            <button type="text" class="btn btn-primary mt-5" id="formSubmitButton" onclick="formSubmit(event)">
+              enviar
+            </button>
+
+          </form>
+        </div>
+        <small class="mt-5 mb-3">* campos com preenchimento necessário</small><br/>
+      </div>
+
+</body>
+
+</html>
